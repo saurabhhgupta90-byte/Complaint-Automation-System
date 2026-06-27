@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Date_Validation</fullName>
+    <active>true</active>
+    <description>Resolution Date cannot be earlier than Complaint Date.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Resolution_Date__c)),
+Resolution_Date__c &lt; Complaint_Date__c
+)</errorConditionFormula>
+    <errorDisplayField>Resolution_Date__c</errorDisplayField>
+    <errorMessage>Resolution Date cannot be earlier than Complaint Date.</errorMessage>
+</ValidationRule>

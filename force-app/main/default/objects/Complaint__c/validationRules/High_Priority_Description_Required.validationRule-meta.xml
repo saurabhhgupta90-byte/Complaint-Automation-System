@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Priority_Description_Required</fullName>
+    <active>true</active>
+    <description>Description is required for High or Critical priority complaints.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Priority__c, &quot;High&quot;),
+ISPICKVAL(Priority__c, &quot;Critical&quot;)
+),
+ISBLANK(Description__c)
+)</errorConditionFormula>
+    <errorDisplayField>Description__c</errorDisplayField>
+    <errorMessage>Description is required for High or Critical priority complaints.</errorMessage>
+</ValidationRule>
