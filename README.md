@@ -1,58 +1,142 @@
-# Salesforce DX Project
+# Complaint Automation System
 
-Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
+## Project Overview
 
-This project template gets you started with the tools and structure you need to build Salesforce applications using source control, scratch orgs, and the Salesforce CLI.
+The Complaint Automation System is an enterprise-grade Salesforce application developed to automate customer complaint management. The solution streamlines complaint registration, priority-based processing, task assignment, status updates, and reporting through Salesforce automation, improving response time and operational efficiency.
 
-## Prerequisites
+---
 
-Before you start, make sure you have:
+## Business Problem
 
-- **Salesforce CLI** - Download from [developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli). See [Install Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm) for details.
-- **VS Code with Salesforce Extension Pack** - See [Installation Instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/install.html) for details. Includes the Agentforce Vibes extension.
-- **A development org** - Sign up for a free Developer Edition org [here](https://developer.salesforce.com/signup).
-- **Dev Hub enabled** (optional, required to create scratch orgs) - You can enable Dev Hub in your development org under Setup > Dev Hub.  See [Provide Developers Access to Salesforce DX Tools](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_dx_tools.htm).
+Organizations often manage customer complaints manually, resulting in delayed responses, inconsistent complaint tracking, and lack of visibility into complaint resolution.
 
-## Project Structure
+This solution centralizes complaint management by automating complaint processing, reducing manual effort, and improving customer service.
 
-Your DX project follows this structure:
+---
 
-- **`force-app/main/default/`** - Your metadata source files live in this default package directory. You can configure additional package directories in the `sfdx-project.json` file.
-- **`config/`** - Scratch org definitions and project settings
-- **`scripts/`** - Automation scripts for common tasks
-- **`sfdx-project.json`** - Project manifest that defines package directories, namespace, API version, and other project-level settings
+## Solution
 
-See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm).
+Designed and developed a Salesforce-based Complaint Automation System using declarative automation and platform features. The application automatically evaluates complaint priority, updates complaint status, creates follow-up tasks, and provides real-time reporting for service teams.
 
-## Get Started
+---
 
-Ready to start developing? The [Get Started with Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_get_started_dx.htm) guide walks you through your first project, from creating a scratch org to creating a simple Apex class or LWC to deploying your code to a sandbox.
+## Key Features
 
-## Common Salesforce CLI Commands
+- Complaint Registration
+- Customer Complaint Tracking
+- Priority-Based Complaint Processing
+- Automatic Status Updates
+- Follow-up Task Creation
+- Record-Triggered Flow Automation
+- Validation Rules
+- Custom Objects & Relationships
+- Custom Fields
+- Reports & Dashboards
+- List Views
+- Role-Based Security
+- Permission Sets
+- Formula Fields
+- Email Notification Ready
+- Lightning Record Pages
 
-Here are common CLI commands that you'll use the most:
+---
 
-- `sf org login web`: Authorize an org
-- `sf org open`: Open your org in a browser
-- `sf org create scratch`: Create a scratch org
-- `sf project deploy start`: Deploy metadata to your org
-- `sf project retrieve start`: Retrieve metadata from your org
-- `sf template generate <artifact>`: Scaffold new components, such as Apex classes and triggers, LWC components, Lightning apps, and more
-- `sf apex <command>`: Run Apex tests, run anonymous Apex blocks, and view logs
-- `sf data <command>`: Work with test data
-- `sf alias <command>`: Manage org aliases
-- `sf config <command>`: Configure CLI settings
+## Salesforce Technologies
 
-## Use Agentforce Vibes to Build Lightning Apps
+- Salesforce Platform
+- Record-Triggered Flow
+- Flow Builder
+- Custom Objects
+- Validation Rules
+- Formula Fields
+- Reports & Dashboards
+- Profiles
+- Permission Sets
+- Salesforce CLI
+- Visual Studio Code
+- Git
+- GitHub
 
-Transform your ideas into custom Lightning apps that extend CRM workflows directly in Lightning Experience. Through natural conversations with Agentforce Vibes, implement custom objects and fields, complex business logic, and dynamic UI components. See [Build a Lightning App Using Agentforce Vibes](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/lexapp-overview.html).
+---
 
-## Additional Resources
+## Functional Modules
 
-- [Agentforce Vibes Developer Guide](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/einstein-overview.html)
-- [Salesforce CLI Installation Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/)
-- [Salesforce CLI Plugin Development Guide](https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/conceptual-overview.html)
-- [Salesforce VS Code Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+### Complaint Management
+- Register Complaint
+- Update Complaint Details
+- Track Complaint Status
+- Complaint History
 
+### Automation
+
+- Automatically evaluates complaint priority.
+- Updates complaint status to **In Progress** for High and Critical priority complaints.
+- Creates follow-up tasks automatically.
+- Supports future email notification automation.
+
+### Reporting
+
+- Complaint Summary Report
+- Open Complaint Dashboard
+- Priority-wise Complaint Report
+- Status-wise Complaint Dashboard
+
+---
+
+## Business Workflow
+
+1. Customer complaint is registered.
+2. Complaint details are validated.
+3. Flow evaluates complaint priority.
+4. High or Critical complaints are automatically moved to **In Progress**.
+5. A follow-up task is created automatically.
+6. Service team processes the complaint.
+7. Reports and dashboards are updated.
+
+---
+
+## Security
+
+- Profiles
+- Permission Sets
+- Field-Level Security
+- Validation Rules
+- Record-Level Security
+
+---
+
+## Business Benefits
+
+- Faster complaint processing
+- Reduced manual effort
+- Improved customer satisfaction
+- Automated task management
+- Better complaint visibility
+- Standardized complaint workflow
+- Real-time reporting and dashboards
+
+---
+
+## Repository Structure
+
+```
+force-app/
+manifest/
+flows/
+objects/
+layouts/
+permissionsets/
+reports/
+dashboards/
+```
+
+---
+
+## Developer
+
+**Saurabh Kumar**
+
+Salesforce Developer
+
+GitHub:
+https://github.com/saurabhhgupta90-byte
